@@ -1,40 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+## Projeto Design System com Next.js e TailwindCSS
 
-## Getting Started
+Este projeto utiliza Next.js, Tailwind CSS e Storybook para a criação de uma biblioteca de componentes reutilizáveis e escaláveis. A estrutura de design é baseada em design tokens, que ajudam a manter um design system consistente em toda a aplicação.
 
-First, run the development server:
+### Objetivos do Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Implementar os princípios do Atomic Design.
+Utilizar design tokens para manter consistência no design system.
+Agilizar o desenvolvimento e estilização com Tailwind CSS.
+Criar componentes reutilizáveis com visualização e testes no Storybook.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Principais Conceitos
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+#### Atomic Design
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+É uma metodologia para criar sistemas de design modulares e escaláveis. Ele organiza a interface em cinco níveis:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- Átomos: os elementos básicos e indivisíveis (ex: botões, inputs).
+- Moléculas: combinações de átomos que formam blocos funcionais (ex: campos de formulário).
+- Organismos: grupos de moléculas formando áreas mais complexas da UI (ex: cabeçalhos, rodapés).
+- Templates: layouts que estruturam a interface e oferecem um guia para a aplicação dos componentes.
+- Páginas: instâncias dos templates com conteúdo real.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### Design Tokens
 
-## Learn More
+Design Tokens são as variáveis que definem o design system, como cores, fontes, espaçamentos e tamanhos. São configurados para garantir que todas as partes da aplicação sigam os mesmos padrões de design, aumentando a consistência visual.
 
-To learn more about Next.js, take a look at the following resources:
+#### Tailwind CSS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+Utilizamos Tailwind CSS para agilizar a estilização dos componentes. Com sua abordagem de utility-first, é possível adicionar classes diretamente nos componentes para aplicar estilos de maneira rápida e consistente, seguindo o design system definido.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### Storybook
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Storybook permite visualizar e testar os componentes de forma isolada. Cada componente pode ter diferentes variações, o que facilita a documentação e o teste visual dos componentes antes de serem integrados na aplicação.
