@@ -45,11 +45,11 @@ module.exports = {
       9: 'var(--spacing-4xl) /* 56px */',
     },
     fontSize: {
-      xs: 'var(--font-xs)',
-      sm: 'var(--font-sm)',
-      md: 'var(--font-md)',
-      lg: 'var(--font-lg)',
-      xl: 'var(--font-xl)',
+      xs: 'var(--text-xs)',
+      sm: 'var(--text-sm)',
+      md: 'var(--text-md)',
+      lg: 'var(--text-lg)',
+      xl: 'var(--text-xl)',
     },
     extend: {
       colors: {
@@ -62,6 +62,7 @@ module.exports = {
         icon: toRgba('--icon'),
         outline: toRgba('--outline'),
         divider: toRgba('--divider'),
+        disabled: toRgba('--text-disabled'),
       },
       backgroundColor: {
         light: toRgba('--bg-light'),
@@ -74,7 +75,6 @@ module.exports = {
           secondary: toRgba('--text-secondary'),
           tertiary: toRgba('--text-tertiary'),
         },
-        disabled: toRgba('--text-disabled'),
       },
       boxShadow: {
         sm: 'var(--shadow-sm)',
